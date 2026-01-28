@@ -10,5 +10,5 @@ app.get("/", (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log("Yogito OS çalışıyor:", PORT);
+  console.log("topii çalışıyor:", PORT);
 });
