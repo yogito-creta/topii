@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Admin Panel</title>
+<style>
+body { background:#111; color:#fff; font-family:Arial; padding:20px }
+input, button { margin:5px }
+</style>
+</head>
+<body>
+
+<h2>Admin Panel</h2>
+
+<form action="/upload" method="post" enctype="multipart/form-data">
+
+<div>
+  SM-A315F: <input type="file" name="SM-A315F">
+</div>
+<div>
+  EVERPAD-DC7015: <input type="file" name="EVERPAD-DC7015">
+</div>
+<div>
+  GT-I9300: <input type="file" name="GT-I9300">
+</div>
+<div>
+  SM-A075F: <input type="file" name="SM-A075F">
+</div>
+<div>
+  MIPO-M25: <input type="file" name="MIPO-M25">
+</div>
+<div>
+  SM-A015F: <input type="file" name="SM-A015F">
+</div>
+
+<br>
+<button type="submit">Kaydet</button>
+</form>
+
+</body>
+</html>
