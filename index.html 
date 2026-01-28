@@ -4,50 +4,41 @@
 <meta charset="UTF-8">
 <title>TPI Official</title>
 <style>
-body { background:#111; color:#fff; font-family:Arial; padding:20px }
-.phone { border:1px solid #333; padding:10px; margin-bottom:15px }
-button { padding:6px 12px; background:#00ff99; border:none; cursor:pointer }
+body { background:#111; color:#fff; font-family:Arial; text-align:center; padding:20px }
+select, button { padding:10px; margin:10px; }
+footer { margin-top:40px; color:#777; cursor:pointer }
 </style>
 </head>
 <body>
 
-<h2>📱 Uyumlu Telefonlar</h2>
+<h1>TPI Official</h1>
 
-<div class="phone">
-  <h3>Samsung Galaxy A31 (SM-A315F)</h3>
-  <img src="https://i.imgur.com/RESIM1.png" width="200"><br><br>
-  <a href="/files/SM-A315F.zip"><button>İndir</button></a>
-</div>
+<select id="device">
+  <option value="">Cihaz seç</option>
+  <option value="SM-A315F">Samsung Galaxy A31</option>
+  <option value="EVERPAD-DC7015">Everest Everpad DC-7015</option>
+  <option value="GT-I9300">Samsung Galaxy S3</option>
+  <option value="SM-A075F">Samsung Galaxy A07</option>
+  <option value="MIPO-M25">Mipo M25</option>
+  <option value="SM-A015F">Samsung Galaxy A01 Core</option>
+</select><br>
 
-<div class="phone">
-  <h3>Everest Everpad DC-7015</h3>
-  <img src="https://i.imgur.com/RESIM2.png" width="200"><br><br>
-  <a href="/files/EVERPAD-DC7015.zip"><button>İndir</button></a>
-</div>
+<button onclick="indir()">İndir</button>
 
-<div class="phone">
-  <h3>Samsung Galaxy S3 (GT-I9300)</h3>
-  <img src="https://i.imgur.com/RESIM3.png" width="200"><br><br>
-  <a href="/files/GT-I9300.zip"><button>İndir</button></a>
-</div>
+<footer onclick="admin()">2026® Topii™</footer>
 
-<div class="phone">
-  <h3>Samsung Galaxy A07 (SM-A075F)</h3>
-  <img src="https://i.imgur.com/RESIM4.png" width="200"><br><br>
-  <a href="/files/SM-A075F.zip"><button>İndir</button></a>
-</div>
-
-<div class="phone">
-  <h3>Mipo M25</h3>
-  <img src="https://i.imgur.com/RESIM5.png" width="200"><br><br>
-  <a href="/files/MIPO-M25.zip"><button>İndir</button></a>
-</div>
-
-<div class="phone">
-  <h3>Samsung Galaxy A01 Core (SM-A015F)</h3>
-  <img src="https://i.imgur.com/RESIM6.png" width="200"><br><br>
-  <a href="/files/SM-A015F.zip"><button>İndir</button></a>
-</div>
+<script>
+function indir(){
+  const d = document.getElementById("device").value;
+  if(!d) return alert("Cihaz seç lan");
+  window.location = "/files/" + d + ".zip";
+}
+function admin(){
+  const s = prompt("Admin şifre:");
+  if(s === "droid") window.location = "/admin";
+  else alert("Yanlış şifre");
+}
+</script>
 
 </body>
 </html>
